@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.modul {
+    position: absolute;
+    z-index: 999;
+    width: 1040px;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    animation-name: animateWin;
+    animation-duration: 1s;
+    animation-delay: 9s;
+    animation-fill-mode: forwards;
+}
+
+.text-chess {
+    position: absolute;
+    left: 16%;
+    top: 30%;
+    color: yellow;
+    font-size: 120px;
+    text-transform: uppercase;
+    animation-name: animateWin;
+    animation-duration: 1s;
+    animation-delay: 9s;
+    animation-fill-mode: forwards;
+}
+
+.board {
+    position: relative;
+    z-index: -1;
+    width: 643px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(8, 80px);
+    grid-template-rows: repeat(8, 80px);
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #FAEBD7;
+}
+
+.even {
+    position: relative;
+    z-index: -1;
+}
+
+.even:nth-child(even) {
+    background-color: #DAA520;
+}
+
+.odd {
+    position: relative;
+    z-index: -1;
+}
+
+.odd:nth-child(odd) {
+    background-color: #DAA520;
+}
+
+.chess {
+    position: relative;
+    top: -642px;
+    width: 642px;
+    height: 642px;
+    margin: 0 auto;
+    z-index: 1;
+    border: 1px solid black;
+}
+
+.chess-figure {
+    width: 60px;
+    height: 60px;
+}
+
+.foot {
+    position: absolute;
+}
+
+.horse {
+    position: absolute;
+}
+
+.rook {
+    position: absolute;
+}
+
+.elephant {
+    position: absolute;
+}
+
+.queen {
+    position: absolute;
+}
+
+.king {
+    position: absolute;
+}
+
+
+/* Foot position */
+
+.foot1 {
+    position: absolute;
+    bottom: 90px;
+    left: 10px;
+}
+
+.foot2 {
+    position: absolute;
+    bottom: 90px;
+    left: 90px;
+}
+
+.foot3 {
+    position: absolute;
+    bottom: 90px;
+    left: 170px;
+}
+
+.foot4 {
+    position: absolute;
+    bottom: 90px;
+    left: 250px;
+}
+
+.foot5 {
+    position: absolute;
+    bottom: 90px;
+    left: 330px;
+    animation-name: animateFoot5;
+    animation-delay: 1.5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.foot6 {
+    position: absolute;
+    bottom: 90px;
+    left: 410px;
+}
+
+.foot7 {
+    position: absolute;
+    bottom: 90px;
+    left: 490px;
+}
+
+.foot8 {
+    position: absolute;
+    bottom: 90px;
+    left: 570px;
+}
+
+.foot-b1 {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+}
+
+.foot-b2 {
+    position: absolute;
+    top: 90px;
+    left: 90px;
+}
+
+.foot-b3 {
+    position: absolute;
+    top: 90px;
+    left: 170px;
+}
+
+.foot-b4 {
+    position: absolute;
+    top: 90px;
+    left: 250px;
+}
+
+.foot-b5 {
+    position: absolute;
+    top: 90px;
+    left: 330px;
+}
+
+.foot-b6 {
+    position: absolute;
+    top: 90px;
+    left: 410px;
+    animation-name: animateFoot-b6;
+    animation-delay: 8s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.foot-b7 {
+    position: absolute;
+    top: 90px;
+    left: 490px;
+}
+
+.foot-b8 {
+    position: absolute;
+    top: 90px;
+    left: 570px;
+    animation-name: animateFoot-b8;
+    animation-delay: 2.3s;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+
+/* Rook position */
+
+.rook1 {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.rook2 {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.rook-b1 {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.rook-b2 {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    animation-name: animateRook-b2;
+    animation-delay: 4.4s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+
+/* Horse position */
+
+.horse1 {
+    position: absolute;
+    left: 90px;
+    bottom: 10px;
+}
+
+.horse2 {
+    position: absolute;
+    right: 90px;
+    bottom: 10px;
+}
+
+.horse-b1 {
+    position: absolute;
+    left: 90px;
+    top: 10px;
+}
+
+.horse-b2 {
+    position: absolute;
+    right: 90px;
+    top: 10px;
+}
+
+
+/* Elephant position */
+
+.elephant1 {
+    position: absolute;
+    left: 170px;
+    bottom: 10px;
+}
+
+.elephant2 {
+    position: absolute;
+    right: 170px;
+    bottom: 10px;
+    animation-name: animateElephant2;
+    animation-delay: 3.2s;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.elephant-b1 {
+    position: absolute;
+    left: 170px;
+    top: 10px;
+}
+
+.elephant-b2 {
+    position: absolute;
+    right: 170px;
+    top: 10px;
+}
+
+
+/* Queen position */
+
+.queen-w {
+    position: absolute;
+    left: 250px;
+    bottom: 10px;
+    animation-name: animateQueen-w;
+    animation-delay: 5.6s;
+    animation-duration: 7.4s;
+    animation-fill-mode: forwards;
+}
+
+.queen-b {
+    position: absolute;
+    left: 250px;
+    top: 10px;
+}
+
+
+/* King position */
+
+.king-w {
+    position: absolute;
+    right: 250px;
+    bottom: 10px;
+}
+
+.king-b {
+    position: absolute;
+    right: 250px;
+    top: 10px;
+}
+
+
+/* CSS ANIMATE */
+
+@keyframes animateFoot5 {
+    from {
+        bottom: 90px;
+        right: 250px;
+    }
+    to {
+        bottom: 170px;
+        right: 250px;
+    }
+}
+
+@keyframes animateElephant2 {
+    from {
+        right: 170px;
+        bottom: 10px;
+    }
+    to {
+        right: 410px;
+        bottom: 250px;
+    }
+}
+
+@keyframes animateFoot-b8 {
+    from {
+        top: 90px;
+        right: 10px;
+    }
+    to {
+        top: 250px;
+        right: 10px;
+    }
+}
+
+@keyframes animateRook-b2 {
+    0% {
+        right: 10px;
+        top: 10px;
+    }
+    33.3% {
+        top: 170px;
+        right: 10px;
+    }
+    74% {
+        top: 170px;
+        right: 10px;
+    }
+    100% {
+        top: 170px;
+        right: 410px;
+    }
+}
+
+@keyframes animateQueen-w {
+    0% {
+        left: 250px;
+        bottom: 10px;
+    }
+    10% {
+        bottom: 170px;
+        left: 410px;
+    }
+    70% {
+        bottom: 170px;
+        left: 410px;
+    }
+    100% {
+        top: 90px;
+        left: 410px;
+    }
+}
+
+@keyframes animateFoot-b6 {
+    from {
+        z-index: 1;
+    }
+    to {
+        z-index: -1;
+        left: 650px;
+        top: 570px;
+    }
+}
+
+@keyframes animateWin {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.7;
+    }
+}
